@@ -1,4 +1,5 @@
-﻿using QLBX.Model;
+﻿using QLBX.FormChucNangCuaHL;
+using QLBX.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,6 +23,7 @@ namespace QLBX.ViewModel
         }
         public bool Isloaded = false;
         public ICommand KhachHangCommand { get; set; }
+        public ICommand VeXeComand { get; set; }
         public MainViewModel()
         {
             if(!Isloaded)
@@ -32,10 +34,16 @@ namespace QLBX.ViewModel
             }
             KhachHangCommand = new RelayCommand<object>((p) => { return true; }, (p) => { KhachHangForm khf = new KhachHangForm(); ; khf.ShowDialog(); });
             LoadKhachHang();
+
+            
+
         }
         public void LoadKhachHang()
         {
            // KhachHangList = DataProvider.Ins.DB.KHACHHANGs.ToList();
         }
+        
+       
+
     }
 }

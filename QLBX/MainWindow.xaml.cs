@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBX.FormChucNangCuaHL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,10 @@ namespace QLBX
         {
             ButtonOpenMenu.Visibility = Visibility.Visible;
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
+
+            UCVeXe uc = new UCVeXe();
+            ticketmain.Children.Clear();
+            ticketmain.Children.Add(uc);
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)

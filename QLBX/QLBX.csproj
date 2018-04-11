@@ -69,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FormChucNangCuaHL\UCVeXe.xaml.cs">
+      <DependentUpon>UCVeXe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FormChucNang\BaoCaoThongKeForm.xaml.cs">
       <DependentUpon>BaoCaoThongKeForm.xaml</DependentUpon>
     </Compile>
@@ -148,6 +151,10 @@
     <Compile Include="FormChucNang\TaiXeForm.xaml.cs">
       <DependentUpon>TaiXeForm.xaml</DependentUpon>
     </Compile>
+    <Page Include="FormChucNangCuaHL\UCVeXe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FormChucNang\BaoCaoThongKeForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,0 +1,161 @@
+﻿<UserControl x:Class="QLBX.FormChucNangCuaHL.UCVeXe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLBX.FormChucNangCuaHL"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid x:Name="mainTicket">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*"></ColumnDefinition>
+            <ColumnDefinition Width="12*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="30*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" x:Name="frist">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="1st floor" TextAlignment="Center" FontSize="50" Grid.Row="0" Grid.Column="7" Grid.RowSpan="5">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="90"></RotateTransform>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+
+            </Grid>
+
+            <Grid Grid.Row="1" Height="10" Background="#2D1E69" Margin="0 5 0 5"></Grid>
+
+            <Grid Grid.Row="2" x:Name="second">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="2nd floor" TextAlignment="Center" FontSize="50" Grid.Row="0" Grid.Column="7" Grid.RowSpan="5">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="90"></RotateTransform>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#3580BF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0"></Grid>
+            <Grid Grid.Column="1">
+                <StackPanel>
+                    <TextBlock></TextBlock>
+                    <TextBlock Foreground="White" TextAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    BOOKING TICKET
+                    </TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBox Foreground="White" Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                                <materialDesign:PackIcon Kind="Account" />
+                                <TextBlock>Customer Name</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </TextBox>
+                    <TextBox Foreground="White" Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                                <materialDesign:PackIcon Kind="Phone" />
+                                <TextBlock>Phone Number</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </TextBox>
+                    <TextBox Foreground="White" Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                                <materialDesign:PackIcon Kind="CashUsd" />
+                                <TextBlock>Surcharge</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </TextBox>
+
+
+                    <StackPanel>
+                        <Expander Background="#3580BF" Foreground="White"  HorizontalAlignment="Left" Header="Ticket Booking">
+                            <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="0,0,0,0">
+                                <ListView Foreground="White" Background="#3580BF" >
+                                    <ListViewItem>ghe 1</ListViewItem>
+                                    <ListViewItem>ghe 2</ListViewItem>
+                                    <ListViewItem>ghe 3</ListViewItem>
+                                </ListView>
+                            </StackPanel>
+                        </Expander>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Background="White" GroupName="ThanhToan" HorizontalAlignment="Left" IsChecked="True">Cash</RadioButton>
+                        <Label></Label>
+                        <RadioButton GroupName="ThanhToan" Background="White" HorizontalAlignment="Right">Booking</RadioButton>
+                    </StackPanel>
+                    <TextBlock></TextBlock>
+                    <TextBlock Foreground="White"><Bold>Total: 100000$</Bold></TextBlock>
+                    <TextBlock></TextBlock>
+                    <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100" Background="#555555"  ToolTip="Resource name: MaterialDesignRaisedLightDarkButton">
+                        COMMIT
+                    </Button>
+
+
+                   
+
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2"></Grid>
+        </Grid>
+
+    </Grid>
+</UserControl>
