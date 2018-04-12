@@ -29,7 +29,7 @@
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="30*"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Style="{StaticResource MaterialDesignTitleTextBlock}" TextAlignment="Center">SƠ ĐỒ XE</TextBlock>
+            <TextBlock Grid.Row="0" Style="{StaticResource MaterialDesignTitleTextBlock}" TextAlignment="Center">SƠ ĐỒ XE luan</TextBlock>
             <Grid Grid.Row="1" x:Name="frist">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
