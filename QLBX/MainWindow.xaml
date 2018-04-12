@@ -333,7 +333,7 @@
                 <Grid x:Name="ticketmain" Grid.Row="1"  Margin="5.2,0,-4.6,0.4">
 
                 </Grid>
-                <Grid>
+                <Grid >
 
 
                     <Button x:Name="ButtonCloseMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Click="ButtonCloseMenu_Click" Visibility="Collapsed">
