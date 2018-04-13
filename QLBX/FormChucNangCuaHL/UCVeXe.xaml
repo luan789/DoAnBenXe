@@ -16,7 +16,7 @@
              Background="{DynamicResource MaterialDesignPaper}"
              FontFamily="{DynamicResource MaterialDesignFont}">
 
-    <Grid x:Name="mainTicket">
+    <Grid x:Name="mainTicket" Background="#b4e0df">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="28*"></ColumnDefinition>
             <ColumnDefinition Width="12*"></ColumnDefinition>
@@ -86,7 +86,7 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Column="1" Background="#3580BF">
+        <Grid Grid.Column="1" Background="#4ec3ca">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="25*"></ColumnDefinition>
@@ -127,7 +127,7 @@
 
 
                     <StackPanel>
-                        <Expander Background="#3580BF" Foreground="White"  HorizontalAlignment="Left" Header="Ticket Booking">
+                        <Expander Background="#4ec3ca" Foreground="White"  HorizontalAlignment="Left" Header="Ticket Booking">
                             <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="0,0,0,0">
                                 <ListView Foreground="White" Background="#3580BF" >
                                     <ListViewItem>ghe 1</ListViewItem>

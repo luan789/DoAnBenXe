@@ -41,15 +41,24 @@ namespace QLBX.FormChucNangCuaHL
 
             BrushConverter bc = new BrushConverter();
             Brush brush;
-            brush = (Brush)bc.ConvertFrom("#00bcd4");
+            brush = (Brush)bc.ConvertFrom("#003f7d");
 
             button.Background = brush;
             button.ToolTip = abc;
             //button.Margin = new Thickness(5, 5, 5, 5);
             parent.Children.Add(button);
-           // button.Click += Button_Click;
+            button.Click += Button_Click;
             Grid.SetRow(button, row);
             Grid.SetColumn(button, column);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton btn = sender as ToggleButton;
+            var bc = new BrushConverter();
+            if (btn.IsChecked == true)
+                btn.Background = (Brush)bc.ConvertFrom("#ebadba");
+            else btn.Background = Brushes.LightGreen;
         }
 
         void createSD(string cap, Grid grid)
