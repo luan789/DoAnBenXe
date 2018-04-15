@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00f3dd33738542cf80b8b539c759fd16" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="QLBXModel.BENXE" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.CHUYENXE" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.GIOKHOIHANH" Width="1.5" PointX="1.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.KHACHHANG" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.LOAIXE" Width="1.5" PointX="1.5" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.NHANVIENXE" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.TUYENXE" Width="1.5" PointX="1.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBXModel.XE" Width="1.5" PointX="1.5" PointY="21.625" IsExpanded="true" />
+        <AssociationConnector Association="QLBXModel.FK_TUYENXE_BENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBXModel.FK_TUYENXE_BENXE1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_GIOKHOIHANH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_TUYENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBXModel.FK_XE_LOAIXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_NHANVIENXE" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_NHANVIENXE1" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_NHANVIENXE2" />
+        <AssociationConnector Association="QLBXModel.FK_CHUYENXE_NHANVIENXE3" />
+        <EntityTypeShape EntityType="QLBXModel.GROUPUSER" Width="1.5" PointX="4.375" PointY="8.125" />
+        <EntityTypeShape EntityType="QLBXModel.PERMISSION" Width="1.5" PointX="6.625" PointY="9.375" />
+        <EntityTypeShape EntityType="QLBXModel.USER" Width="1.5" PointX="6.5" PointY="7.125" />
+        <AssociationConnector Association="QLBXModel.GROUPUSER_PERMISSION" />
+        <AssociationConnector Association="QLBXModel.USER_GROUPUSER" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
