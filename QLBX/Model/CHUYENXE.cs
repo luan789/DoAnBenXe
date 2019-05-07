@@ -28,6 +28,9 @@ namespace QLBX.Model
         public virtual GIOKHOIHANH GIOKHOIHANH { get; set; }
         public virtual TUYENXE TUYENXE { get; set; }
         public virtual XE XE { get; set; }
-        public virtual PHANCONG PHANCONG { get; set; }
+        public virtual NHANVIENXE NHANVIENXE { get; set; }
+        public virtual NHANVIENXE NHANVIENXE1 { get; set; }
+        public virtual NHANVIENXE NHANVIENXE2 { get; set; }
+        public virtual NHANVIENXE NHANVIENXE3 { get; set; }
     }
 }

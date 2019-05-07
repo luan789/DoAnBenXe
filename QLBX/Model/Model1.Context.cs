@@ -31,9 +31,11 @@ namespace QLBX.Model
         public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
         public virtual DbSet<LOAIXE> LOAIXEs { get; set; }
         public virtual DbSet<NHANVIENXE> NHANVIENXEs { get; set; }
-        public virtual DbSet<PHANCONG> PHANCONGs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TUYENXE> TUYENXEs { get; set; }
         public virtual DbSet<XE> XEs { get; set; }
+        public virtual DbSet<GROUPUSER> GROUPUSERs { get; set; }
+        public virtual DbSet<PERMISSION> PERMISSIONs { get; set; }
+        public virtual DbSet<USER> USERs { get; set; }
     }
 }

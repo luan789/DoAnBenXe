@@ -17,9 +17,9 @@ namespace QLBX
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class TaiXeForm : Window
     {
-        public Window1()
+        public TaiXeForm()
         {
             InitializeComponent();
         }

@@ -7,357 +7,293 @@
         xmlns:nguyenthieuluan ="clr-namespace:QLBX.ViewModel"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-         TextElement.FontWeight="Regular"
-         TextElement.FontSize="13"
-         TextOptions.TextFormattingMode="Ideal"
-         TextOptions.TextRenderingMode="Auto"
-         Background="{DynamicResource MaterialDesignPaper}"
-         FontFamily="{DynamicResource MaterialDesignFont}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         DataContext="{StaticResource MainVM}"
-        Title="MainWindow" Height="500" Width="900">
+        WindowStartupLocation="CenterScreen"
+        Name="mainWindow"
+        Title="MainWindow" Height="500" Width="900"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        >
     <!--<Window.DataContext>
         <nguyenthieuluan:KhachHangVM></nguyenthieuluan:KhachHangVM>
     </Window.DataContext>-->
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid Background="Gray">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <Window.Resources>
-        <Storyboard x:Key="OpenMenu">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GridMain">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="GridMain">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="50"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="StackPanelMenu">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem6">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem7">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem8">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.45" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItem9">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="CloseMenu">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GridMain">
-                <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="GridMain">
-                <EasingDoubleKeyFrame KeyTime="0" Value="50"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="StackPanelMenu">
-                <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
-            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
-            <BeginStoryboard x:Name="CloseMenu_BeginStoryboard" Storyboard="{StaticResource CloseMenu}"/>
-        </EventTrigger>
-
-        <EventTrigger RoutedEvent="UIElement.PreviewMouseLeftButtonDown" SourceName="listViewItem">
-            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
-        </EventTrigger>
-
-    </Window.Triggers>
-
-    <Grid>
-        <Grid Background="#FF3580BF">
-            <StackPanel x:Name="StackPanelMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" RenderTransformOrigin="0.5,0.5">
-                <StackPanel.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </StackPanel.RenderTransform>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100" HorizontalAlignment="Center">
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Width="50" Height="50" Margin="10">
-                        <materialDesign:PackIcon Kind="Settings" Width="40" Height="40"/>
-                    </Button>
-
-
-
-                    <Button x:Name="button" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="80" Height="80" Margin="10" RenderTransformOrigin="0.5,0.5">
-                        <Button.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Button.RenderTransform>
-                        <Button.Background>
-                            <ImageBrush ImageSource="Assets/pexels-photo-247885.jpeg" Stretch="UniformToFill"/>
-                        </Button.Background>
-                    </Button>
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Width="50" Height="50" Margin="10">
-                        <materialDesign:PackIcon Kind="InformationOutline" Width="40" Height="40"/>
-                    </Button>
-                </StackPanel>
-                <ListView>
-                    <ListViewItem x:Name="listViewItem" PreviewMouseLeftButtonDown="listViewItem_PreviewMouseLeftButtonDown" Height="60" RenderTransformOrigin="0.5,0.5" >
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Ticket" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="TICKET" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem1" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="HumanMale" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="CUSTOMER" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem2" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="FolderMultiple" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="DEPOSIT" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem3" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Twitter" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Twitter" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem4" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Skype" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Skype" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem5" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Facebook" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Facebook" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem6" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Facebook" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Facebook" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem7" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Facebook" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Facebook" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem8" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Facebook" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Facebook" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="listViewItem9" Height="60" RenderTransformOrigin="0.5,0.5">
-                        <ListViewItem.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ListViewItem.RenderTransform>
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Facebook" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Facebook" Margin="10" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                </ListView>
+        <!--Row 0-->
+        <Grid Grid.Row="0" >
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Width" Value="60"></Setter>
+                    <Setter Property="Height" Value="50"></Setter>
+                    <Setter Property="Margin" Value="4 8 4 8"></Setter>
+                </Style>
+            </Grid.Resources>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" Orientation="Horizontal">
+                <Button Click="Button_Click"
+                    ToolTip="Follow me on Twitter">
+                    <materialDesign:PackIcon
+                Kind="TwitterBox" />
+                </Button>
             </StackPanel>
-
-            <!--<Grid x:Name="GridMain" Background="#FFFBFBFB" RenderTransformOrigin="0.5,0.5" Margin="0,0,-0.4,0">
-                <Button x:Name="ButtonCloseMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Click="ButtonCloseMenu_Click" Visibility="Collapsed">
-                    <materialDesign:PackIcon Kind="ArrowLeft" Foreground="#FF3580BF"/>
-                </Button>
-                <Button x:Name="ButtonOpenMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Click="ButtonOpenMenu_Click">
-                    <materialDesign:PackIcon Kind="Menu" Foreground="#FF3580BF"/>
-                </Button>
-            </Grid>-->
-
-
-            
-            <Grid x:Name="GridMain" Background="#FFFBFBFB" RenderTransformOrigin="0.5,0.5" Margin="0,0,-0.4,0">
-                <Grid.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Grid.RenderTransform>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <Grid x:Name="ticketmain" Grid.Row="1"  Margin="5.2,0,-4.6,0.4">
-
+        </Grid>
+        <!--Row 1-->
+        <Grid Grid.Row="1" Background="LightBlue" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--row 1.0-->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="129*"/>
+                    <ColumnDefinition Width="94*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                 </Grid>
-                <Grid >
-
-
-                    <Button x:Name="ButtonCloseMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Click="ButtonCloseMenu_Click" Visibility="Collapsed">
-                        <materialDesign:PackIcon Kind="ArrowLeft" Foreground="#FF3580BF"/>
-                    </Button>
-                    <Button x:Name="ButtonOpenMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Click="ButtonOpenMenu_Click">
-                        <materialDesign:PackIcon Kind="Menu" Foreground="#FF3580BF"/>
-                    </Button>
-
-
-
+                <DatePicker Grid.Column="0" Width="340" materialDesign:HintAssist.Hint="Pick Date"
+                    Style="{StaticResource MaterialDesignFloatingHintDatePicker}" HorizontalAlignment="Left" />
+                <Button
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="396,0,20.13,0">
+                    Filter
+                </Button>
+            </Grid>
+            <!--row 1.1-->
+            <Grid Grid.Row="1" Background="Black" >
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Width" Value="auto"></Setter>
+                        <Setter Property="Height" Value="auto"></Setter>
+                        <Setter Property="Margin" Value="4 8 4 8"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!--cot 1-->
+                    <Grid  Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" ToolTip="Đặt Mua Vé" Command="{Binding DatMuaVeCommand}" >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Đặt Mua Vé</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="1" ToolTip="Nhân Viên Bán Vé" Command="{Binding NhanVienBanVeCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Nhân Viên Bán Vé</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                    <!--cot 2-->
+                    <Grid  Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" ToolTip="Khách Hàng" Command="{Binding KhachHangCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Khách Hàng</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="1" ToolTip="Khách Gửi Nhận Hàng" Command="{Binding KhachGuiNhanHangCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Khách Gửi Nhận Hàng</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                    <!--cot 3-->
+                    <Grid  Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" ToolTip="Chuyến Xe" Command="{Binding ChuyenXeCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Chuyến Xe</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="34*"/>
+                                        <ColumnDefinition Width="12*"/>
+                                        <ColumnDefinition Width="18*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" Grid.ColumnSpan="2" Margin="28,0,2.28,0" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="1" ToolTip="Tuyến Xe" Command="{Binding TuyenXeCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Tuyến Xe</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                    <!--cot 4-->
+                    <Grid  Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" ToolTip="Tài Xế" Command="{Binding TaiXeCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Tài Xế</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="1" ToolTip="Phụ Xe" Command="{Binding PhuXeCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Phụ Xe</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                    <!--cot 5-->
+                    <Grid  Grid.Column="4">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" ToolTip="Giao Nhận Hàng" Command="{Binding GiaoNhanHangCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Giao Nhận Hàng</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="1" ToolTip="Báo Cáo Thống Kê" Command="{Binding BaoCaoThongKeCommand}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock>Báo Cáo Thống Kê</TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="TwitterBox" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
                 </Grid>
             </Grid>
-            
-            
-            
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="40" HorizontalAlignment="Right" Margin="10">
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
-                    <materialDesign:PackIcon Kind="Bell"/>
-                </Button>
-                <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="ButtonClose_Click" Margin="0,5,0,0" VerticalAlignment="Top">
-                    <materialDesign:PackIcon Kind="Power"/>
-                </Button>
-            </StackPanel>
+        </Grid>
+        <!--row 2-->
+        <Grid Grid.Row="2" Background="LightBlue" HorizontalAlignment="Stretch" >
+            <ListView ItemsSource="{Binding KhachHangList}" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id Khách Hàng" DisplayMemberBinding="{Binding IDKhach}"></GridViewColumn>
+                        <GridViewColumn Header="Tên" DisplayMemberBinding="{Binding TenKhach}"></GridViewColumn>
+                        <GridViewColumn Header="CMND" DisplayMemberBinding="{Binding CMND}"></GridViewColumn>
+                        <GridViewColumn Header="DiaChi" DisplayMemberBinding="{Binding DiaChi}"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
         </Grid>
     </Grid>
 </Window>

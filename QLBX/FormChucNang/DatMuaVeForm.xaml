@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLBX"
         mc:Ignorable="d"
-        Title="DatMuaVeForm" Height="300" Width="300">
-    <Grid>
+        Title="DatMuaVeForm" Height="500" Width="900">
+    <Grid Background="Gray">
         
     </Grid>
 </Window>

@@ -17,10 +17,10 @@ namespace QLBX.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHANVIENXE()
         {
-            this.PHANCONGs = new HashSet<PHANCONG>();
-            this.PHANCONGs1 = new HashSet<PHANCONG>();
-            this.PHANCONGs2 = new HashSet<PHANCONG>();
-            this.PHANCONGs3 = new HashSet<PHANCONG>();
+            this.CHUYENXEs = new HashSet<CHUYENXE>();
+            this.CHUYENXEs1 = new HashSet<CHUYENXE>();
+            this.CHUYENXEs2 = new HashSet<CHUYENXE>();
+            this.CHUYENXEs3 = new HashSet<CHUYENXE>();
         }
     
         public string IDNHANVIENXE { get; set; }
@@ -34,12 +34,12 @@ namespace QLBX.Model
         public string LOAINHANVIEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHANCONG> PHANCONGs { get; set; }
+        public virtual ICollection<CHUYENXE> CHUYENXEs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHANCONG> PHANCONGs1 { get; set; }
+        public virtual ICollection<CHUYENXE> CHUYENXEs1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHANCONG> PHANCONGs2 { get; set; }
+        public virtual ICollection<CHUYENXE> CHUYENXEs2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHANCONG> PHANCONGs3 { get; set; }
+        public virtual ICollection<CHUYENXE> CHUYENXEs3 { get; set; }
     }
 }

@@ -11,26 +11,16 @@ namespace QLBX.ViewModel
 {
     public class KhachHangVM
     {
-        private List<KHACHHANG> _KhachHangList;
-
-        public List<KHACHHANG> KhachHangList
+        private ObservableCollection<KHACHHANG> _KhachHangList;
+        public ObservableCollection<KHACHHANG> KhachHangList
         {
             get { return _KhachHangList; }
             set { _KhachHangList= value; }
         }
-
-        QLBXEntities DB = new QLBXEntities();
-
-
         public KhachHangVM()
         {
-            var khachhang = DB.KHACHHANGs.ToList();
-            KhachHangList = khachhang;
-
-        //DeleteCommand = new RelayCommand<object>((p) => p != null, (p) => {
-        //    Listf.Remove(p as SINHVIEN);
-        //});
-    }
+            KhachHangList = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.KHACHHANGs);
+        }
 
     //public ICommand DeleteCommand { get; set; }
 
